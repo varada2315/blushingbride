@@ -35,9 +35,9 @@ function Contact() {
   return (
     <>
       {/* HERO COVER */}
-      <section className="section theme-white" style={{ paddingTop: '150px', paddingBottom: '60px', textAlign: 'center' }}>
+      <section className="section theme-white" style={{ paddingTop: 'clamp(100px, 15vw, 150px)', paddingBottom: '60px', textAlign: 'center' }}>
         <div className="container">
-          <h2 style={{ fontSize: '4rem', color: 'var(--color-black)', marginBottom: '10px' }}>Contact Us</h2>
+          <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', color: 'var(--color-black)', marginBottom: '10px' }}>Contact Us</h2>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.25em', color: '#8c7f75' }}>
             Let's tell your story together
           </p>
@@ -66,7 +66,7 @@ function Contact() {
 
               <div className="contact-info-block">
                 <span className="contact-info-title">Call Us</span>
-                <span class="contact-info-text">+91 99647 87383</span>
+                <span className="contact-info-text">+91 99647 87383</span>
               </div>
 
               <div className="contact-info-block">

@@ -13,6 +13,51 @@ function Home() {
     setLightbox({ isOpen: false, videoUrl: '' });
   };
 
+  const selectedWeddings = [
+    {
+      id: 1,
+      names: 'Tamanna & Dan',
+      location: 'Jodhpur, India',
+      img: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600',
+      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+    },
+    {
+      id: 2,
+      names: 'Alisha & Rahul',
+      location: 'Amalfi Coast, Italy',
+      img: 'https://images.unsplash.com/photo-1537907690979-ee8e01276184?q=80&w=800',
+      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+    },
+    {
+      id: 3,
+      names: 'Saloni & Sid',
+      location: 'Bangkok, Thailand',
+      img: 'https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=800',
+      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+    },
+    {
+      id: 4,
+      names: 'Zina & Zain',
+      location: 'Srinagar, India',
+      img: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=800',
+      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+    },
+    {
+      id: 5,
+      names: 'Prerna & Neil',
+      location: 'Jaipur, India',
+      img: 'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=80&w=800',
+      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+    },
+    {
+      id: 6,
+      names: 'Esheta & Sarthak',
+      location: 'Udaipur, India',
+      img: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=800',
+      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+    }
+  ];
+
   return (
     <>
       {/* SECTION 2: HERO BANNER */}
@@ -135,76 +180,84 @@ function Home() {
           </div>
         </div>
 
-        <div className="container" style={{ textAlign: 'center', marginTop: '50px' }}>
-          <span className="btn-primary" style={{ fontSize: '0.75rem', padding: '14px 30px', letterSpacing: '0.1em', border: '1px solid rgba(0,0,0,0.15)', background: 'transparent', color: 'var(--color-charcoal)', display: 'inline-block' }}>
-            Photography Blog
-          </span>
-        </div>
       </section>
 
       {/* SECTION 5: FEATURED WEDDINGS */}
-      <section className="section theme-white fade-in-section" style={{ paddingTop: 0, paddingBottom: '120px' }}>
+      <section className="section theme-white fade-in-section" style={{ paddingTop: '80px', paddingBottom: '100px' }}>
         <div className="container">
-          <div style={{ marginBottom: '60px' }}>
-            <span className="text-uppercase letter-spacing-wide font-sans" style={{ fontSize: '0.75rem', color: 'var(--color-softgrey)', display: 'block', marginBottom: '10px' }}>FEATURED ARCHIVES</span>
-            <h3 style={{ fontSize: '3rem', color: 'var(--color-charcoal)' }}>Selected Weddings</h3>
+          <div style={{ marginBottom: '60px', textAlign: 'center' }}>
+            <span className="text-uppercase letter-spacing-wide font-sans" style={{ fontSize: '0.75rem', color: 'var(--color-gold)', display: 'block', marginBottom: '10px', fontWeight: 600 }}>FEATURED ARCHIVES</span>
+            <h3 style={{ fontSize: 'clamp(2.2rem, 6vw, 3rem)', color: 'var(--color-charcoal)', margin: 0 }}>Selected Weddings</h3>
           </div>
 
-          <div className="grid-3" style={{ alignItems: 'end', gap: '50px' }}>
+          <div className="grid-4" style={{ gap: '30px' }}>
             {/* Card 1 */}
-            <div className="portfolio-card">
-              <div className="img-zoom-wrapper portfolio-card-img" style={{ aspectRatio: '3/4' }}>
-                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600" alt="TAMANNA & DAN cover" />
-              </div>
-              <div className="portfolio-card-info" style={{ marginTop: '15px' }}>
-                <h4 className="portfolio-card-title" style={{ fontSize: '1.4rem' }}>Tamanna & Dan</h4>
-                <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', color: 'var(--color-softgrey)' }}>October 2025 . Jodhpur, India</p>
+            <div className="premium-wedding-card">
+              <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?q=80&w=600" alt="May 1, 2026 wedding cover" />
+              <div className="premium-wedding-overlay">
+                <span className="premium-wedding-date">May 1, 2026</span>
+                <h4 className="premium-wedding-title">Modern Romance</h4>
               </div>
             </div>
 
             {/* Card 2 */}
-            <div className="portfolio-card">
-              <div className="img-zoom-wrapper portfolio-card-img" style={{ aspectRatio: '1/1' }}>
-                <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=600" alt="REVA & ZACH cover" />
-              </div>
-              <div className="portfolio-card-info" style={{ marginTop: '15px' }}>
-                <h4 className="portfolio-card-title" style={{ fontSize: '1.4rem' }}>Reva & Zach</h4>
-                <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', color: 'var(--color-softgrey)' }}>December 2025 . Rome, Italy</p>
+            <div className="premium-wedding-card">
+              <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=600" alt="Reva & Zach cover" />
+              <div className="premium-wedding-overlay">
+                <span className="premium-wedding-date">October 7, 2024</span>
+                <h4 className="premium-wedding-title">Reva & Zach</h4>
               </div>
             </div>
 
             {/* Card 3 */}
-            <div className="portfolio-card">
-              <div className="img-zoom-wrapper portfolio-card-img" style={{ aspectRatio: '3/4' }}>
-                <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=600" alt="ALIA & RANBIR cover" />
-              </div>
-              <div className="portfolio-card-info" style={{ marginTop: '15px' }}>
-                <h4 className="portfolio-card-title" style={{ fontSize: '1.4rem' }}>Alia & Ranbir</h4>
-                <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', color: 'var(--color-softgrey)' }}>April 2025 . Mumbai, India</p>
+            <div className="premium-wedding-card">
+              <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=600" alt="August 25, 2024 wedding cover" />
+              <div className="premium-wedding-overlay">
+                <span className="premium-wedding-date">August 25, 2024</span>
+                <h4 className="premium-wedding-title">Visual Poetry</h4>
               </div>
             </div>
+
+            {/* Card 4 */}
+            <div className="premium-wedding-card">
+              <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=600" alt="Alia & Ranbir cover" />
+              <div className="premium-wedding-overlay">
+                <span className="premium-wedding-date">August 8, 2024</span>
+                <h4 className="premium-wedding-title">Alia & Ranbir, Mumbai</h4>
+              </div>
+            </div>
+          </div>
+
+          <div style={{ textAlign: 'center', marginTop: '60px' }}>
+            <span className="btn-primary" style={{ backgroundColor: 'var(--color-gold)', color: 'var(--color-white)', border: 'none', padding: '14px 30px', fontSize: '0.75rem', letterSpacing: '0.1em', display: 'inline-block', cursor: 'pointer', borderRadius: '4px' }}>
+              Photography Blog
+            </span>
           </div>
         </div>
       </section>
 
       {/* SECTION 6: FILMS SECTION (Redesigned with looping stock video, clip-path, & SVG flower overlays) */}
-      <section className="films-section fade-in-section">
-        {/* Background Looping Stock Video */}
-        <video autoPlay loop muted playsInline className="films-bg-video">
-          <source src={filmsVideo} type="video/mp4" />
-        </video>
+      <div className="films-section-wrapper">
+        <section className="films-section fade-in-section">
+          {/* Background Looping Stock Video */}
+          <video autoPlay loop muted playsInline className="films-bg-video">
+            <source src={filmsVideo} type="video/mp4" />
+          </video>
 
-        {/* Overlay Dark Tint */}
-        <div className="films-overlay"></div>
+          {/* Overlay Dark Tint */}
+          <div className="films-overlay"></div>
 
-        {/* Content Container */}
-        <div className="films-content-container">
-          <h3 className="films-title">SOUL<span>+</span>CINEMA</h3>
-          <p className="films-description">
-            Every wedding is unique and so are our films. For past 8 years HOTC has set new benchmarks of of storytelling within wedding realm and beyond. We are fortunate to have experienced so unique cultures and traditions across 25 countries and to document stories that continuously overwhelm us.
-          </p>
-        </div>
-      </section>
+          {/* Content Container */}
+          <div className="films-content-container">
+            <span style={{ fontSize: '0.75rem', letterSpacing: '0.3em', color: 'var(--color-gold)', textTransform: 'uppercase', marginBottom: '15px', fontWeight: 600 }}>Featured Reel</span>
+            <h3 className="films-title">SOUL<span>+</span>CINEMA</h3>
+            <div className="films-divider" style={{ width: '60px', height: '1px', backgroundColor: 'var(--color-gold)', margin: '20px auto' }}></div>
+            <p className="films-description">
+              Every wedding is unique and so are our films. For past 8 years HOTC has set new benchmarks of of storytelling within wedding realm and beyond. We are fortunate to have experienced so unique cultures and traditions across 25 countries and to document stories that continuously overwhelm us.
+            </p>
+          </div>
+        </section>
+      </div>
 
       {/* SECTION 7: AWARDS STRIP */}
       <section className="section theme-white" style={{ paddingTop: '100px', paddingBottom: '100px', borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
@@ -314,148 +367,46 @@ function Home() {
         </div>
       </section>
 
-      {/* SECTION 9: SELECTED FILMS */}
-      <section className="section theme-white fade-in-section" style={{ paddingTop: 0, paddingBottom: '180px', position: 'relative', overflow: 'hidden' }}>
-        <div className="stories-bg-element stories-bg-circle-1"></div>
-        <div className="stories-bg-element stories-bg-arch-1"></div>
-        <div className="stories-bg-element stories-bg-watermark-1">Stories</div>
-
-        <div className="container">
-          <div style={{ marginBottom: '60px' }}>
-            <span className="text-uppercase letter-spacing-wide font-sans" style={{ fontSize: '0.75rem', color: 'var(--color-softgrey)', display: 'block', marginBottom: '10px' }}>SELECTED CINEMA</span>
-            <h3 style={{ fontSize: '3.5rem', color: 'var(--color-charcoal)', fontFamily: 'var(--font-serif)', fontWeight: 300 }}>Visual Stories</h3>
-          </div>
-
-          <div className="visual-stories-grid">
-            {/* Card 1 */}
-            <div className="portfolio-card video-card stories-card stories-card-1" onClick={() => openVideo('https://www.youtube.com/embed/dQw4w9WgXcQ')}>
-              <div className="stories-card-thumbnail" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1537907690979-ee8e01276184?q=80&w=800')" }}></div>
-              <div className="stories-card-overlay">
-                <span className="stories-card-meta">October 2025 • Srinagar</span>
-                <h4 className="stories-card-title">
-                  Tamanna<br />& Dan
-                </h4>
-                <div className="stories-card-play"><span>&#9658;</span></div>
-              </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="portfolio-card video-card stories-card stories-card-2" onClick={() => openVideo('https://www.youtube.com/embed/dQw4w9WgXcQ')}>
-              <div className="stories-card-thumbnail" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=800')" }}></div>
-              <div className="stories-card-overlay">
-                <span className="stories-card-meta">December 2025 • Rome</span>
-                <h4 className="stories-card-title">
-                  Reva<br />& Zach
-                </h4>
-                <div className="stories-card-play"><span>&#9658;</span></div>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="portfolio-card video-card stories-card stories-card-3" onClick={() => openVideo('https://www.youtube.com/embed/dQw4w9WgXcQ')}>
-              <div className="stories-card-thumbnail" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=800')" }}></div>
-              <div className="stories-card-overlay">
-                <span className="stories-card-meta">April 2025 • Mumbai</span>
-                <h4 className="stories-card-title">
-                  Alia<br />& Ranbir
-                </h4>
-                <div className="stories-card-play"><span>&#9658;</span></div>
-              </div>
-            </div>
-
-            {/* Card 4 */}
-            <div className="portfolio-card video-card stories-card stories-card-4" onClick={() => openVideo('https://www.youtube.com/embed/dQw4w9WgXcQ')}>
-              <div className="stories-card-thumbnail" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=800')" }}></div>
-              <div className="stories-card-overlay">
-                <span className="stories-card-meta">August 2025 • Jodhpur</span>
-                <h4 className="stories-card-title">
-                  Mona<br />& Ahmad
-                </h4>
-                <div className="stories-card-play"><span>&#9658;</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 10: PRESS MENTIONS STRIP */}
-      <section className="section theme-white" style={{ paddingTop: '80px', paddingBottom: '80px', borderTop: '1px solid rgba(0,0,0,0.06)', borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
-        <div className="container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '40px' }}>
-          <span className="text-uppercase letter-spacing-wide font-sans" style={{ fontSize: '0.7rem', color: 'var(--color-softgrey)', fontWeight: 600, letterSpacing: '0.2em' }}>Press & Covers</span>
+      {/* SECTION 9: SELECTED WEDDINGS GRID */}
+      <section className="section theme-white fade-in-section" style={{ paddingTop: '100px', paddingBottom: '160px' }}>
+        <div className="container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '60px' }}>
           
-          <div className="magazine-stand-wrapper">
-            {/* Cover 1 */}
-            <div className="magazine-cover-card">
-              <div className="cover-bg" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=400')" }}></div>
-              <div className="cover-overlay">
-                <div className="cover-logo logo-vogue">VOGUE</div>
-                <div>
-                  <div className="cover-headline">Modern Romance</div>
-                  <div className="cover-issue">Fall Edition</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Cover 2 */}
-            <div className="magazine-cover-card">
-              <div className="cover-bg" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=400')" }}></div>
-              <div className="cover-overlay">
-                <div className="cover-logo logo-bazaar">BAZAAR</div>
-                <div>
-                  <div className="cover-headline">The Style Issue</div>
-                  <div className="cover-issue">Dec 2025</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Cover 3 */}
-            <div className="magazine-cover-card">
-              <div className="cover-bg" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=400')" }}></div>
-              <div className="cover-overlay">
-                <div className="cover-logo logo-brides">Brides</div>
-                <div>
-                  <div className="cover-headline">Real Weddings</div>
-                  <div className="cover-issue">Summer Issue</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Cover 4 */}
-            <div className="magazine-cover-card">
-              <div className="cover-bg" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=400')" }}></div>
-              <div className="cover-overlay">
-                <div className="cover-logo logo-elle">ELLE</div>
-                <div>
-                  <div className="cover-headline">New Luxury</div>
-                  <div className="cover-issue">Annual 2026</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Cover 5 */}
-            <div className="magazine-cover-card">
-              <div className="cover-bg" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=400')" }}></div>
-              <div className="cover-overlay">
-                <div className="cover-logo logo-gq">GQ</div>
-                <div>
-                  <div className="cover-headline">Tailored Love</div>
-                  <div className="cover-issue">Special Issue</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Cover 6 */}
-            <div className="magazine-cover-card">
-              <div className="cover-bg" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=400')" }}></div>
-              <div className="cover-overlay">
-                <div className="cover-logo logo-weddings">Wedding</div>
-                <div>
-                  <div className="cover-headline">The Collective</div>
-                  <div className="cover-issue">US Edition</div>
-                </div>
-              </div>
-            </div>
+          {/* Header Text Block */}
+          <div style={{ textAlign: 'center', maxWidth: '850px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', lineHeight: '1.8', color: 'var(--color-charcoal)', opacity: 0.85, fontWeight: 300, margin: 0 }}>
+              We at Blushing Bride celebrate the wild ones, the rule breakers, the travellers, the new age modern couple who are not afraid to experiment. We believe the ultimate goal of a wedding photographer is to justify the vibe of the wedding and the personalities of the couple. And this approach has helped us experience weddings in a two bedroom apartments to weddings spread over 2 continents.
+            </p>
+            <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', lineHeight: '1.8', color: 'var(--color-charcoal)', opacity: 0.85, fontWeight: 300, margin: 0 }}>
+              Here are some selected weddings from past couple of years to showcase the union of two people in the most authentic way possible.
+            </p>
           </div>
+
+          {/* 2-Column Grid */}
+          <div className="video-grid-2col">
+            {selectedWeddings.map((wedding) => (
+              <div 
+                className="selected-wedding-video-card" 
+                key={wedding.id}
+                onClick={() => openVideo(wedding.videoUrl)}
+              >
+                <div 
+                  className="selected-wedding-video-card-thumbnail" 
+                  style={{ backgroundImage: `url('${wedding.img}')` }}
+                ></div>
+                <div className="selected-wedding-video-card-overlay">
+                  <span className="selected-wedding-video-card-sub">Blushing Bride Studios</span>
+                  <div className="selected-wedding-video-card-play">
+                    <span>&#9658;</span>
+                  </div>
+                  <h4 className="selected-wedding-video-card-title">{wedding.names}</h4>
+                  {wedding.location && (
+                    <span className="selected-wedding-video-card-location">{wedding.location}</span>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+
         </div>
       </section>
 

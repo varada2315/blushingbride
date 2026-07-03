@@ -42,9 +42,9 @@ function Blogs() {
   return (
     <>
       {/* HERO COVER */}
-      <section className="section theme-white" style={{ paddingTop: '150px', paddingBottom: '60px', textAlign: 'center' }}>
+      <section className="section theme-white" style={{ paddingTop: 'clamp(100px, 15vw, 150px)', paddingBottom: '60px', textAlign: 'center' }}>
         <div className="container">
-          <h2 style={{ fontSize: '4rem', color: 'var(--color-black)', marginBottom: '10px' }}>Our Journal</h2>
+          <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', color: 'var(--color-black)', marginBottom: '10px' }}>Our Journal</h2>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.25em', color: '#8c7f75' }}>
             Behind the frames, stories, and journeys
           </p>

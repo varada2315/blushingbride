@@ -4,9 +4,9 @@ function OurStory() {
   return (
     <>
       {/* HERO COVER */}
-      <section className="section theme-white" style={{ paddingTop: '150px', paddingBottom: '60px', textAlign: 'center' }}>
+      <section className="section theme-white" style={{ paddingTop: 'clamp(100px, 15vw, 150px)', paddingBottom: '60px', textAlign: 'center' }}>
         <div className="container">
-          <h2 style={{ fontSize: '4rem', color: 'var(--color-black)', marginBottom: '10px' }}>Our Story</h2>
+          <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', color: 'var(--color-black)', marginBottom: '10px' }}>Our Story</h2>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.25em', color: '#8c7f75' }}>
             Behind the lenses of Blushing Bride
           </p>
@@ -19,7 +19,7 @@ function OurStory() {
           <div className="grid-2" style={{ gap: '80px' }}>
             {/* Left: Text */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
-              <h3 style={{ fontSize: '3rem', lineHeight: 1.1, fontStyle: 'italic' }}>
+              <h3 style={{ fontSize: 'clamp(2rem, 6vw, 3rem)', lineHeight: 1.1, fontStyle: 'italic' }}>
                 "We don't capture events. We preserve the wind, the laughter, and the quiet spaces between."
               </h3>
               <p style={{ fontFamily: 'var(--font-sans)', fontSize: '1rem', lineHeight: '1.8', opacity: 0.8, fontWeight: 300, color: 'var(--color-text-dark)' }}>
@@ -42,10 +42,10 @@ function OurStory() {
       </section>
 
       {/* CORE VALUES / PHILOSOPHY */}
-      <section className="section theme-cream fade-in-section" style={{ marginTop: '80px', padding: '100px 0' }}>
+      <section className="section theme-cream fade-in-section" style={{ marginTop: '80px', padding: 'clamp(60px, 8vw, 100px) 0' }}>
         <div className="container" style={{ display: 'flex', flexDirection: 'column', gap: '60px' }}>
           <div style={{ textAlign: 'center' }}>
-            <h3 style={{ fontSize: '3rem', marginBottom: '10px' }}>Our Philosophy</h3>
+            <h3 style={{ fontSize: 'clamp(2rem, 6vw, 3rem)', marginBottom: '10px' }}>Our Philosophy</h3>
             <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.2em', color: '#8c7f75' }}>The pillars of our artistry</p>
           </div>
 
@@ -93,10 +93,10 @@ function OurStory() {
       </section>
 
       {/* BEHIND THE SCENES SHOWCASE */}
-      <section className="section theme-white fade-in-section" style={{ paddingTop: '100px' }}>
+      <section className="section theme-white fade-in-section" style={{ paddingTop: 'clamp(60px, 8vw, 100px)' }}>
         <div className="container" style={{ display: 'flex', flexDirection: 'column', gap: '50px' }}>
           <div style={{ textAlign: 'center' }}>
-            <h3 style={{ fontSize: '3rem' }}>Behind The Scenes</h3>
+            <h3 style={{ fontSize: 'clamp(2rem, 6vw, 3rem)' }}>Behind The Scenes</h3>
             <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.2em', opacity: 0.6 }}>
               Our team at work across the globe
             </p>

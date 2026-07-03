@@ -16,9 +16,9 @@ function Portfolio() {
   return (
     <>
       {/* HERO COVER */}
-      <section className="section theme-black" style={{ paddingTop: '150px', paddingBottom: '60px', textAlign: 'center' }}>
+      <section className="section theme-black" style={{ paddingTop: 'clamp(100px, 15vw, 150px)', paddingBottom: '60px', textAlign: 'center' }}>
         <div className="container">
-          <h2 style={{ fontSize: '4rem', color: 'var(--color-white)', marginBottom: '10px' }}>Our Portfolio</h2>
+          <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', color: 'var(--color-white)', marginBottom: '10px' }}>Our Portfolio</h2>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.25em', color: 'var(--color-cream)' }}>
             Visual legacies of human unions
           </p>

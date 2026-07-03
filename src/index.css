@@ -134,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .theme-white {
-    background-color: var(--color-white);
+    background-color: var(--color-cream);
     color: var(--color-text-dark);
 }
 
@@ -180,7 +180,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Scroll color swap: text swaps from white to charcoal on off-white background */
 .header-nav.scrolled {
-    background-color: var(--color-white);
+    background-color: var(--color-cream);
     color: var(--color-charcoal);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     height: 75px;
@@ -316,7 +316,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Light theme dropdown adaptations */
 .nav-light-bg .nav-dropdown,
 .header-nav.scrolled .nav-dropdown {
-    background-color: var(--color-white);
+    background-color: var(--color-cream);
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
@@ -418,6 +418,7 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.05em;
     display: inline-block;
     padding: 10px 0;
+    color: var(--color-white);
 }
 
 .mobile-nav-link span {
@@ -1155,7 +1156,7 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-white);
+    background-color: var(--color-cream);
     color: var(--color-charcoal);
     text-align: center;
     padding: 16px;
@@ -1832,6 +1833,12 @@ h1, h2, h3, h4, h5, h6 {
 /* ==========================================================================
    FILMS SECTION REDESIGN (Autoplay Video, clip-path, & SVG Overlays)
    ========================================================================== */
+.films-section-wrapper {
+    background-color: var(--color-cream);
+    padding: 80px 0;
+    width: 100%;
+}
+
 .films-section {
     position: relative;
     width: 100%;
@@ -1846,7 +1853,7 @@ h1, h2, h3, h4, h5, h6 {
     clip-path: polygon(0 12%, 74% 26%, 100% 12%, 100% 88%, 26% 74%, 0 88%);
     z-index: 2;
     padding: 0;
-    margin: 80px 0;
+    margin: 0;
 }
 
 .films-overlay {
@@ -1980,7 +1987,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Mobile responsive resets */
+@media (max-width: 991px) {
+    .nav-social-icons,
+    .btn-nav-action {
+        display: none !important;
+    }
+}
+
 @media (max-width: 768px) {
+    .header-nav {
+        height: var(--header-height-mobile) !important;
+    }
+    .header-nav.scrolled {
+        height: 60px !important;
+    }
+    .logo-text {
+        font-size: 1.15rem !important;
+    }
+    .logo-text span {
+        font-size: 0.6rem !important;
+        letter-spacing: 0.15em !important;
+    }
     .films-section {
         clip-path: polygon(0 6%, 74% 14%, 100% 6%, 100% 94%, 26% 86%, 0 94%); /* softer clip path angles on mobile */
         height: 80vw;
@@ -1991,4 +2018,221 @@ h1, h2, h3, h4, h5, h6 {
     .films-flower-left-2 { display: none; }
     .films-flower-right-1 { width: 35vw; height: 35vw; right: -10vw; }
     .films-flower-right-2 { display: none; }
+}
+
+/* ==========================================================================
+   SELECTED WEDDINGS 2-COLUMN GRID (Premium Staggered Design)
+   ========================================================================== */
+.video-grid-2col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    width: 100%;
+}
+
+@media (min-width: 769px) {
+    .video-grid-2col {
+        padding-bottom: 60px;
+    }
+    .video-grid-2col > div:nth-child(even) {
+        transform: translateY(60px);
+    }
+}
+
+@media (max-width: 768px) {
+    .video-grid-2col {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+.selected-wedding-video-card {
+    position: relative;
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.6s ease;
+}
+
+.selected-wedding-video-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(180, 153, 90, 0.15);
+}
+
+.selected-wedding-video-card-thumbnail {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 1.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.selected-wedding-video-card:hover .selected-wedding-video-card-thumbnail {
+    transform: scale(1.06);
+}
+
+.selected-wedding-video-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 26, 26, 0.45);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    color: var(--color-white);
+    text-align: center;
+    transition: background-color 0.4s ease;
+    z-index: 2;
+}
+
+.selected-wedding-video-card-overlay::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    transition: border-color 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+    z-index: 3;
+    border-radius: 4px;
+}
+
+.selected-wedding-video-card:hover .selected-wedding-video-card-overlay::after {
+    border-color: rgba(180, 153, 90, 0.5); /* Premium Gold Frame on Hover */
+    transform: scale(1.02);
+}
+
+.selected-wedding-video-card:hover .selected-wedding-video-card-overlay {
+    background-color: rgba(26, 26, 26, 0.55);
+}
+
+.selected-wedding-video-card-sub {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: var(--color-cream);
+    opacity: 0.85;
+}
+
+.selected-wedding-video-card-play {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background-color: rgba(26, 26, 26, 0.2);
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 4;
+}
+
+.selected-wedding-video-card:hover .selected-wedding-video-card-play {
+    transform: scale(1.1);
+    border-color: var(--color-gold);
+    background-color: rgba(180, 153, 90, 0.2);
+}
+
+.selected-wedding-video-card-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 0;
+    color: var(--color-white);
+    line-height: 1.2;
+}
+
+.selected-wedding-video-card-location {
+    font-family: var(--font-serif);
+    font-size: clamp(0.85rem, 1.2vw, 1rem);
+    font-style: italic;
+    opacity: 0.9;
+    margin-top: 8px;
+    color: var(--color-gold);
+}
+
+/* ==========================================================================
+   SECTION 5: SELECTED ARCHIVES (Premium Card Overlay Design)
+   ========================================================================== */
+.premium-wedding-card {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 3/4;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.03);
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.6s ease;
+}
+
+.premium-wedding-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(180, 153, 90, 0.12);
+}
+
+.premium-wedding-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.premium-wedding-card:hover img {
+    transform: scale(1.06);
+}
+
+.premium-wedding-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 30px 30px 30px;
+    background: linear-gradient(to top, rgba(26, 26, 26, 0.85) 0%, rgba(26, 26, 26, 0.4) 60%, transparent 100%);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 60%;
+    opacity: 0.95;
+    transition: opacity 0.4s ease, background 0.4s ease;
+}
+
+.premium-wedding-card:hover .premium-wedding-overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(26, 26, 26, 0.95) 0%, rgba(26, 26, 26, 0.5) 60%, transparent 100%);
+}
+
+.premium-wedding-date {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    margin-bottom: 8px;
+}
+
+.premium-wedding-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: 0.05em;
+    line-height: 1.3;
+    color: var(--color-white);
 }
