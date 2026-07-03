@@ -1112,27 +1112,27 @@ h1, h2, h3, h4, h5, h6 {
 /* Main Collage Grid Container */
 .photography-collage-grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: 5vw; /* Proportional row height scaling */
-    gap: 24px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
     position: relative;
     z-index: 1;
-    padding: 60px 0;
-    margin-bottom: 80px;
+    width: 100%;
 }
 
 /* Individual Collage Items */
 .collage-item {
     position: relative;
     overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: 100%;
     background-color: var(--color-cream);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .collage-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 45px rgba(180, 153, 90, 0.15); /* Subtle gold glow on hover */
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     z-index: 10 !important; /* Ensure hovered item is on top */
 }
 
@@ -1146,240 +1146,59 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .collage-item:hover img {
-    transform: scale(1.06);
+    transform: scale(1.05);
 }
 
-/* Arched Image styling for select images */
-.collage-item.arched-item {
-    border-radius: 12vw 12vw 0 0;
+/* Centered Text Card styling */
+.collage-text-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white);
+    color: var(--color-charcoal);
+    text-align: center;
+    padding: 16px;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
 }
 
-/* Matte Border Card style */
-.collage-item.matte-frame {
-    padding: 12px;
-    background: var(--color-white);
-    border: 1px solid rgba(180, 153, 90, 0.15);
-}
-
-/* Grid coordinates for each of the 12 collage images */
-.collage-item-1 {
-    grid-column: 1 / span 4;
-    grid-row: 1 / span 8;
-}
-
-.collage-item-2 {
-    grid-column: 5 / span 5;
-    grid-row: 2 / span 6;
-}
-
-.collage-item-3 {
-    grid-column: 10 / span 3;
-    grid-row: 1 / span 7;
-}
-
-.collage-item-4 {
-    grid-column: 1 / span 6;
-    grid-row: 9 / span 5;
-}
-
-.collage-item-5 {
-    grid-column: 7 / span 6;
-    grid-row: 8 / span 5;
-}
-
-.collage-item-6 {
-    grid-column: 1 / span 3;
-    grid-row: 14 / span 6;
-}
-
-.collage-item-7 {
-    grid-column: 4 / span 5;
-    grid-row: 14 / span 7;
-}
-
-.collage-item-8 {
-    grid-column: 9 / span 4;
-    grid-row: 13 / span 6;
-}
-
-.collage-item-9 {
-    grid-column: 1 / span 4;
-    grid-row: 21 / span 7;
-}
-
-.collage-item-10 {
-    grid-column: 5 / span 4;
-    grid-row: 21 / span 6;
-}
-
-.collage-item-11 {
-    grid-column: 9 / span 4;
-    grid-row: 19 / span 8;
-}
-
-.collage-item-12 {
-    grid-column: 5 / span 8;
-    grid-row: 27 / span 5;
-}
-
-/* Abstract Background Shapes & Decorative Elements */
-.collage-bg-shape {
-    position: absolute;
-    pointer-events: none;
-    z-index: -1;
-    opacity: 0.5;
-    transition: transform 0.5s ease;
-}
-
-.collage-bg-shape-1 {
-    width: 20vw;
-    height: 20vw;
-    border: 1.5px solid var(--color-gold);
-    border-radius: 50%;
-    top: 5vw;
-    left: 20vw;
-    opacity: 0.3;
-}
-
-.collage-bg-shape-2 {
-    width: 25vw;
-    height: 38vw;
-    background-color: var(--color-cream);
-    border-radius: 12vw 12vw 0 0;
-    bottom: 15vw;
-    right: 25vw;
-    opacity: 0.4;
-}
-
-.collage-bg-shape-3 {
-    width: 1px;
-    height: 35vw;
-    background: linear-gradient(to bottom, transparent, var(--color-gold) 30%, var(--color-gold) 70%, transparent);
-    top: 15vw;
-    left: 75vw;
-    transform: rotate(18deg);
-    opacity: 0.4;
-}
-
-/* Large Editorial Watermark Text in the background */
-.collage-watermark-text {
-    position: absolute;
+.collage-text-card .subtitle-top,
+.collage-text-card .subtitle-bottom {
     font-family: var(--font-serif);
-    font-size: 26vw;
-    font-weight: 300;
-    color: var(--color-cream);
-    opacity: 0.25;
-    pointer-events: none;
-    z-index: -2;
-    line-height: 1;
-    user-select: none;
-}
-
-.collage-watermark-text-1 {
-    top: 8vw;
-    left: 45vw;
+    font-size: clamp(0.7rem, 1vw, 1.1rem);
     font-style: italic;
+    color: var(--color-charcoal);
+    opacity: 0.85;
+    margin: 0;
+    line-height: 1.2;
 }
 
-.collage-watermark-text-2 {
-    bottom: 12vw;
-    left: 10vw;
-}
-
-/* Botanical SVG Line Art Container */
-.collage-botanical-art {
-    position: absolute;
-    width: 18vw;
-    height: 25vw;
-    z-index: -1;
-    pointer-events: none;
-    opacity: 0.25;
-    color: var(--color-gold);
-}
-
-.botanical-pos-1 {
-    top: 12vw;
-    right: 3vw;
-    transform: rotate(-15deg);
-}
-
-.botanical-pos-2 {
-    bottom: 8vw;
-    left: 2vw;
-    transform: rotate(25deg);
-}
-
-/* Muted solid color block as backplate backdrop */
-.collage-backplate {
-    position: absolute;
-    background-color: #F8F5EE;
-    border: 1px solid rgba(180, 153, 90, 0.1);
-    z-index: -1;
-    pointer-events: none;
-}
-
-.backplate-1 {
-    grid-column: 1 / span 4;
-    grid-row: 1 / span 8;
-    transform: translate(-15px, -15px);
-}
-
-.backplate-2 {
-    grid-column: 9 / span 4;
-    grid-row: 13 / span 6;
-    transform: translate(15px, 15px);
-    border-radius: 8px;
+.collage-text-card .title-main {
+    font-family: var(--font-serif);
+    font-size: clamp(1.6rem, 3.2vw, 3.5rem);
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 8px 0;
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+    color: var(--color-charcoal);
 }
 
 /* Responsive Overrides */
 @media (max-width: 991px) {
     .photography-collage-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: auto;
-        gap: 24px;
-        padding: 30px 0;
-        margin-bottom: 40px;
-    }
-    
-    .collage-item {
-        grid-column: span 1 !important;
-        grid-row: auto !important;
-        aspect-ratio: auto !important;
-        transform: none !important;
-    }
-
-    /* Force certain landscape images to span 2 columns to break monotony */
-    .collage-item-2,
-    .collage-item-4,
-    .collage-item-9 {
-        grid-column: span 2 !important;
-    }
-    
-    .collage-item.arched-item {
-        border-radius: 40px 40px 0 0;
-    }
-    
-    /* Hide decorative backplates and fine line art on smaller screens to avoid clutter */
-    .collage-bg-shape,
-    .collage-watermark-text,
-    .collage-botanical-art,
-    .collage-backplate {
-        display: none !important;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4px;
     }
 }
 
 @media (max-width: 576px) {
     .photography-collage-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .collage-item {
-        grid-column: span 1 !important;
-    }
-    
-    .collage-item.arched-item {
-        border-radius: 30px 30px 0 0;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2px;
     }
 }
 
@@ -1840,4 +1659,336 @@ h1, h2, h3, h4, h5, h6 {
     .logo-elle { font-size: 1.3rem; }
     .logo-gq { font-size: 1.6rem; }
     .logo-weddings { font-size: 0.9rem; }
+}
+
+/* ==========================================================================
+   ABOUT 3-COLUMN LAYOUT (Redesigned & Realigned)
+   ========================================================================== */
+.about-3col-layout {
+    display: grid;
+    grid-template-columns: 0.75fr 1.7fr 0.75fr;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+}
+
+/* Columns placement/alignments matching the screenshot */
+.about-col-left {
+    display: block;
+    transform: translateY(60px); /* shift left portrait image lower down */
+}
+
+.about-col-left img,
+.about-col-right img {
+    filter: grayscale(100%);
+    transition: filter 0.8s ease, transform 1.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.about-col-left:hover img,
+.about-col-right:hover img {
+    filter: grayscale(0%);
+}
+
+.about-col-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.about-col-right {
+    display: block;
+    transform: translateY(-60px); /* shift right landscape image higher up */
+}
+
+/* Styled Title Block */
+.about-title-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.about-est {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+}
+
+.about-heading-top {
+    font-family: var(--font-serif);
+    font-size: clamp(1.6rem, 2.4vw, 2.6rem);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: var(--color-charcoal);
+    margin: 0;
+    line-height: 1;
+}
+
+.about-heading-bottom {
+    font-family: var(--font-serif);
+    font-size: clamp(1.8rem, 2.8vw, 3.0rem);
+    font-weight: 300;
+    color: var(--color-charcoal);
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+}
+
+.about-heading-bottom em {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 300;
+    text-transform: lowercase;
+    margin-right: 8px;
+}
+
+/* Text Content styles */
+.about-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    line-height: 1.9;
+    font-weight: 400;
+    opacity: 0.95;
+    color: var(--color-charcoal);
+    text-align: center;
+}
+
+.about-text-content p {
+    margin: 0;
+}
+
+/* Logos Row styles */
+.about-logos-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    padding-top: 30px;
+    width: 100%;
+}
+
+.about-logo-item {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--color-charcoal);
+    opacity: 0.75;
+    transition: opacity 0.3s ease;
+}
+
+.about-logo-item:hover {
+    opacity: 1;
+}
+
+/* Responsive styles for 3-Column Layout */
+@media (max-width: 991px) {
+    .about-3col-layout {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    /* Reorder for natural mobile reading hierarchy */
+    .about-col-left {
+        order: 2;
+        margin-top: 0;
+        align-self: center;
+        width: 100%;
+        max-width: 500px;
+        transform: none;
+    }
+    
+    .about-col-center {
+        order: 1;
+    }
+    
+    .about-col-right {
+        order: 3;
+        margin-bottom: 0;
+        align-self: center;
+        width: 100%;
+        max-width: 600px;
+        transform: none;
+    }
+    
+    .about-logos-row {
+        order: 4;
+        gap: 20px;
+    }
+}
+
+/* ==========================================================================
+   FILMS SECTION REDESIGN (Autoplay Video, clip-path, & SVG Overlays)
+   ========================================================================== */
+.films-section {
+    position: relative;
+    width: 100%;
+    height: 52vw; /* scalable height */
+    min-height: 520px;
+    max-height: 720px;
+    overflow: hidden;
+    background-color: var(--color-warmblack);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0 12%, 50% 26%, 100% 12%, 100% 88%, 50% 74%, 0 88%);
+    z-index: 2;
+    padding: 0;
+    margin: 80px 0;
+}
+
+.films-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65));
+    z-index: 1;
+}
+
+.films-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: grayscale(100%) contrast(1.1) brightness(0.65);
+}
+
+/* SVG Flower Overlays */
+.films-flower {
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0.9;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
+}
+
+.films-flower-left-1 {
+    left: -6vw;
+    top: 15%;
+    width: 25vw;
+    height: 25vw;
+    transform: rotate(-10deg);
+}
+
+.films-flower-left-2 {
+    left: -4vw;
+    bottom: 12%;
+    width: 18vw;
+    height: 18vw;
+    transform: rotate(35deg);
+}
+
+.films-flower-right-1 {
+    right: -6vw;
+    top: 18%;
+    width: 26vw;
+    height: 26vw;
+    transform: rotate(115deg);
+}
+
+.films-flower-right-2 {
+    right: -4vw;
+    bottom: 14%;
+    width: 19vw;
+    height: 19vw;
+    transform: rotate(-25deg);
+}
+
+/* Center Content block */
+.films-content-container {
+    position: relative;
+    z-index: 3;
+    max-width: 650px;
+    width: 90%;
+    text-align: center;
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 0 20px;
+}
+
+.films-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.2rem, 4.2vw, 4.8rem);
+    letter-spacing: 0.12em;
+    color: var(--color-white);
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1;
+    font-weight: 300;
+}
+
+.films-title span {
+    font-weight: 200;
+    color: var(--color-gold);
+    margin: 0 10px;
+}
+
+.films-description {
+    font-family: var(--font-sans);
+    font-size: clamp(0.85rem, 1.1vw, 1.05rem);
+    line-height: 1.8;
+    font-weight: 300;
+    opacity: 0.85;
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+/* Awards Strip Header styled cleanly */
+.awards-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.awards-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.3rem, 1.8vw, 1.8rem);
+    letter-spacing: 0.1em;
+    color: var(--color-charcoal);
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.awards-line {
+    width: 45px;
+    height: 3px;
+    background-color: var(--color-gold);
+}
+
+/* Mobile responsive resets */
+@media (max-width: 768px) {
+    .films-section {
+        clip-path: polygon(0 6%, 50% 14%, 100% 6%, 100% 94%, 50% 86%, 0 94%); /* softer clip path angles on mobile */
+        height: 80vw;
+        min-height: 420px;
+    }
+    
+    .films-flower-left-1 { width: 35vw; height: 35vw; left: -10vw; }
+    .films-flower-left-2 { display: none; }
+    .films-flower-right-1 { width: 35vw; height: 35vw; right: -10vw; }
+    .films-flower-right-2 { display: none; }
 }
