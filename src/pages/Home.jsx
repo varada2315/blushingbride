@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import VideoLightbox from '../VideoLightbox';
+import filmsVideo from '../assets/15083324_4096_2160_25fps.mp4';
 
 function Home() {
   const [lightbox, setLightbox] = useState({ isOpen: false, videoUrl: '' });
@@ -37,7 +38,7 @@ function Home() {
             {/* Left Column: Portrait Photo */}
             <div className="about-col-left">
               <div className="img-zoom-wrapper" style={{ aspectRatio: '3/4', boxShadow: '0 15px 30px rgba(0,0,0,0.05)', backgroundColor: '#e5dec9' }}>
-                <img src="https://images.unsplash.com/photo-1591555200813-ac537f6317d6?q=80&w=800" alt="Intimate couple portrait close up" />
+                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=800" alt="Intimate couple portrait close up" />
               </div>
             </div>
 
@@ -70,7 +71,7 @@ function Home() {
             {/* Right Column: Landscape Photo */}
             <div className="about-col-right">
               <div className="img-zoom-wrapper" style={{ aspectRatio: '3/2', boxShadow: '0 15px 30px rgba(0,0,0,0.05)', backgroundColor: '#e5dec9' }}>
-                <img src="https://images.unsplash.com/photo-1519225495810-7512c696505a?q=80&w=800" alt="Scenic wedding party landscape" />
+                <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=800" alt="Scenic wedding party landscape" />
               </div>
             </div>
           </div>
@@ -190,77 +191,17 @@ function Home() {
       <section className="films-section fade-in-section">
         {/* Background Looping Stock Video */}
         <video autoPlay loop muted playsInline className="films-bg-video">
-          <source src="https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c054f4d82b3d0cf93a8d9cc2f6230f2f&profile_id=139&oauth2_token_id=57447761" type="video/mp4" />
+          <source src={filmsVideo} type="video/mp4" />
         </video>
 
         {/* Overlay Dark Tint */}
         <div className="films-overlay"></div>
 
-        {/* Left Flower Overlays */}
-        <svg className="films-flower films-flower-left-1" viewBox="0 0 200 200" fill="rgba(255, 255, 255, 0.85)">
-          <g transform="translate(100, 100)">
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" opacity="0.9" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(30)" opacity="0.75" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(60)" opacity="0.9" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(90)" opacity="0.75" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(120)" opacity="0.9" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(150)" opacity="0.75" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(180)" opacity="0.9" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(210)" opacity="0.75" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(240)" opacity="0.9" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(270)" opacity="0.75" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(300)" opacity="0.9" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(330)" opacity="0.75" />
-          </g>
-        </svg>
-
-        <svg className="films-flower films-flower-left-2" viewBox="0 0 200 200" fill="rgba(255, 255, 255, 0.75)">
-          <g transform="translate(100, 100)">
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" opacity="0.9" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(30)" opacity="0.75" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(60)" opacity="0.9" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(90)" opacity="0.75" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(120)" opacity="0.9" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(150)" opacity="0.75" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(180)" opacity="0.9" />
-          </g>
-        </svg>
-
-        {/* Right Flower Overlays */}
-        <svg className="films-flower films-flower-right-1" viewBox="0 0 200 200" fill="rgba(255, 255, 255, 0.85)">
-          <g transform="translate(100, 100)">
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" opacity="0.9" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(30)" opacity="0.75" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(60)" opacity="0.9" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(90)" opacity="0.75" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(120)" opacity="0.9" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(150)" opacity="0.75" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(180)" opacity="0.9" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(210)" opacity="0.75" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(240)" opacity="0.9" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(270)" opacity="0.75" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(300)" opacity="0.9" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(330)" opacity="0.75" />
-          </g>
-        </svg>
-
-        <svg className="films-flower films-flower-right-2" viewBox="0 0 200 200" fill="rgba(255, 255, 255, 0.75)">
-          <g transform="translate(100, 100)">
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" opacity="0.9" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(30)" opacity="0.75" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(60)" opacity="0.9" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(90)" opacity="0.75" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(120)" opacity="0.9" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(150)" opacity="0.75" />
-            <path d="M 0 0 C -25 -45, -45 -85, 0 -105 C 45 -85, 25 -45, 0 0" transform="rotate(180)" opacity="0.9" />
-          </g>
-        </svg>
-
         {/* Content Container */}
         <div className="films-content-container">
           <h3 className="films-title">SOUL<span>+</span>CINEMA</h3>
           <p className="films-description">
-            Every wedding is unique and so are our films. For past 8 years HOTC has set new benchmarks of storytelling within wedding realm and beyond. We are fortunate to have experienced so unique cultures and traditions across 25 countries and to document stories that continuously overwhelm us.
+            Every wedding is unique and so are our films. For past 8 years HOTC has set new benchmarks of of storytelling within wedding realm and beyond. We are fortunate to have experienced so unique cultures and traditions across 25 countries and to document stories that continuously overwhelm us.
           </p>
         </div>
       </section>

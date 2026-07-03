@@ -1843,7 +1843,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-    clip-path: polygon(0 12%, 50% 26%, 100% 12%, 100% 88%, 50% 74%, 0 88%);
+    clip-path: polygon(0 12%, 74% 26%, 100% 12%, 100% 88%, 26% 74%, 0 88%);
     z-index: 2;
     padding: 0;
     margin: 80px 0;
@@ -1939,12 +1939,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .films-title span {
     font-weight: 200;
-    color: var(--color-gold);
-    margin: 0 10px;
+    color: var(--color-white);
+    margin: 0 4px;
 }
 
 .films-description {
-    font-family: var(--font-sans);
+    font-family: var(--font-serif);
     font-size: clamp(0.85rem, 1.1vw, 1.05rem);
     line-height: 1.8;
     font-weight: 300;
@@ -1982,7 +1982,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Mobile responsive resets */
 @media (max-width: 768px) {
     .films-section {
-        clip-path: polygon(0 6%, 50% 14%, 100% 6%, 100% 94%, 50% 86%, 0 94%); /* softer clip path angles on mobile */
+        clip-path: polygon(0 6%, 74% 14%, 100% 6%, 100% 94%, 26% 86%, 0 94%); /* softer clip path angles on mobile */
         height: 80vw;
         min-height: 420px;
     }
